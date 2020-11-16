@@ -12,7 +12,7 @@ def play(runs, switch=False):
         goats = [num for num, door in enumerate(doors) if door != 1 and num != chosen]
         doors.pop(random.choice(goats))
         if switch:
-            value = abs(value - 1)
+            value = [door for door in doors if door != value][0]
         if value == 1:
             wins += 1
         else:
