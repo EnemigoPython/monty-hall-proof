@@ -15,11 +15,9 @@ def play(runs, switch=False):
             value = [door for door in doors if door != value][0]
         if value == 1:
             wins += 1
-        else:
-            losses += 1
     print(f"wins: {wins}")
-    print(f"losses: {losses}")
-    print(f"{round(((wins / (wins + losses)) * 100))}%")
+    print(f"losses: {runs - wins}")
+    print(f"{round((wins / runs) * 100)}%")
 
 
 def main():
