@@ -3,7 +3,6 @@ import random
 
 def play(runs, switch=False):
     wins = 0
-    losses = 0
     for attempt in range(runs):
         doors = [0 for x in range(3)]
         doors[random.randint(0, 2)] = 1
